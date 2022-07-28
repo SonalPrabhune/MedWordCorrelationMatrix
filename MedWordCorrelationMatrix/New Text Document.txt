@@ -1,0 +1,11 @@
+
+  Message={code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input ',': expected ":" (line 1, column 125 (offset: 124))
+"MERGE (u:TERM {name: patients, cui: C0030705, pubmed_id: 35143603})MERGE (v:TERM {name: reperfusion, cui: C0684253, C0035124, pubmed_id: 35143603})MERGE (u)-[c:CORRELATED]->(v)ON CREATE SET c.weight = 1ON MATCH SET c.weight = c.weight+1"
+                                                                                                                             ^}
+  Source=C:\Users\sonal\Projects\MachineLearning\VisualStudioProjects\USF_Project\MedWordCorrelationMatrix v2\MedWordCorrelationMatrix\MedWordCorrelationMatrix\MedWordCorrelationMatrix.py
+  StackTrace:
+  File "C:\Users\sonal\Projects\MachineLearning\VisualStudioProjects\USF_Project\MedWordCorrelationMatrix v2\MedWordCorrelationMatrix\MedWordCorrelationMatrix\MedWordCorrelationMatrix.py", line 219, in <module> (Current frame)
+    result = session.run(query)
+
+
+ MERGE (u:TERM {name: 'patients', cui: 'C0030705', pubmed_id: '35143603'}) MERGE (v:TERM {name: 'reperfusion', cui: 'C0684253, C0035124', pubmed_id: '35143603'}) MERGE (u)-[c:CORRELATED]->(v) ON CREATE SET c.weight = 1 ON MATCH SET c.weight = c.weight+1
